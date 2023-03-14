@@ -26,8 +26,10 @@ public class GitHubLinkParser implements LinkParserChain{
         if(matcher.matches()){
             return new GitHubResult(matcher.group("username"), matcher.group("repository"));
         }
-        else {
-        return nextChain.parseLink(link);
+        else if(!(nextChain == null)){
+            return nextChain.parseLink(link);
+        }else {
+            return null;
         }
     }
 

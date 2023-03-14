@@ -21,8 +21,10 @@ public class StackOverflowLinkParser implements LinkParserChain{
         if(matcher.matches()){
             return new StackOverflowResult(matcher.group("id"));
         }
-        else {
+        else if(!(nextChain == null)){
             return nextChain.parseLink(link);
+        }else {
+            return null;
         }
     }
 
