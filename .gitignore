@@ -1,0 +1,6 @@
+.vscode
+.idea
+
+/bot/target
+/link-parser/target
+/scrapper/target
