@@ -1,0 +1,7 @@
+ru\tinkoff\edu\java\linkparser\parser\LinkParserBuilder.class
+ru\tinkoff\edu\java\linkparser\result\GitHubResult.class
+ru\tinkoff\edu\java\linkparser\parser\LinkParserChain.class
+ru\tinkoff\edu\java\linkparser\result\StackOverflowResult.class
+ru\tinkoff\edu\java\linkparser\result\Result.class
+ru\tinkoff\edu\java\linkparser\parser\GitHubLinkParser.class
+ru\tinkoff\edu\java\linkparser\parser\StackOverflowLinkParser.class
