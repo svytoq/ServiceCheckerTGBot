@@ -6,7 +6,7 @@ import ru.tinkoff.edu.java.linkparser.result.StackOverflowResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class StackOverflowLinkParser implements LinkParserChain{
+public class StackOverflowLinkParser extends AbstractLinkParser{
 
     private LinkParserChain nextChain;
 
@@ -14,22 +14,14 @@ public class StackOverflowLinkParser implements LinkParserChain{
             "^(?:https://)?(?:www\\.)?stackoverflow\\.com/questions/(?<id>\\d+)(?:/?|/[a-zA-Z\\-]+/?)$"
     );
 
-
     @Override
-    public Result parseLink(String link) {
-        Matcher matcher = ID_PATTERN.matcher(link);
-        if(matcher.matches()){
-            return new StackOverflowResult(matcher.group("id"));
-        }
-        else if(!(nextChain == null)){
-            return nextChain.parseLink(link);
-        }else {
-            return null;
-        }
+    Matcher getNewMatcher(String link) {
+        return ID_PATTERN.matcher(link);
     }
 
     @Override
-    public void setNextChain(LinkParserChain nextChain) {
-        this.nextChain = nextChain;
+    Result getNewResult(Matcher matcher, String link) {
+        return new StackOverflowResult(matcher.group("id"));
     }
+
 }

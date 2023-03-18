@@ -6,7 +6,7 @@ import ru.tinkoff.edu.java.linkparser.result.Result;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class GitHubLinkParser implements LinkParserChain{
+public class GitHubLinkParser extends AbstractLinkParser{
 
     private LinkParserChain nextChain;
 
@@ -21,20 +21,13 @@ public class GitHubLinkParser implements LinkParserChain{
     );
 
     @Override
-    public Result parseLink(String link) {
-        Matcher matcher = USERNAME_REPOSITORY_PATTERN.matcher(link);
-        if(matcher.matches()){
-            return new GitHubResult(matcher.group("username"), matcher.group("repository"));
-        }
-        else if(!(nextChain == null)){
-            return nextChain.parseLink(link);
-        }else {
-            return null;
-        }
+    Matcher getNewMatcher(String link) {
+        return USERNAME_REPOSITORY_PATTERN.matcher(link);
     }
 
     @Override
-    public void setNextChain(LinkParserChain nextChain) {
-        this.nextChain = nextChain;
+    Result getNewResult(Matcher matcher, String link) {
+        return new GitHubResult(matcher.group("username"), matcher.group("repository"));
     }
+
 }
