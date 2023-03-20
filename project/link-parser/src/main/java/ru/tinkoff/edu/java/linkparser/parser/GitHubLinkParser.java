@@ -21,12 +21,12 @@ public class GitHubLinkParser extends AbstractLinkParser{
     );
 
     @Override
-    Matcher getNewMatcher(String link) {
+    public Matcher getNewMatcher(String link) {
         return USERNAME_REPOSITORY_PATTERN.matcher(link);
     }
 
     @Override
-    Result getNewResult(Matcher matcher, String link) {
+    public Result getNewResult(Matcher matcher, String link) {
         return new GitHubResult(matcher.group("username"), matcher.group("repository"));
     }
 

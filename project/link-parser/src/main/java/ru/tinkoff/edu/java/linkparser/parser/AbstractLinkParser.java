@@ -8,9 +8,6 @@ public abstract class AbstractLinkParser implements LinkParserChain {
     protected LinkParserChain nextChain;
 
 
-    abstract Matcher getNewMatcher(String link);
-    abstract Result getNewResult(Matcher matcher, String link);
-
     @Override
     public Result parseLink(String link) {
         Matcher matcher = getNewMatcher(link);

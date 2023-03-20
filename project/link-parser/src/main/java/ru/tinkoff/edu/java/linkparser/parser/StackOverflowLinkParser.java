@@ -15,12 +15,12 @@ public class StackOverflowLinkParser extends AbstractLinkParser{
     );
 
     @Override
-    Matcher getNewMatcher(String link) {
+    public Matcher getNewMatcher(String link) {
         return ID_PATTERN.matcher(link);
     }
 
     @Override
-    Result getNewResult(Matcher matcher, String link) {
+    public Result getNewResult(Matcher matcher, String link) {
         return new StackOverflowResult(matcher.group("id"));
     }
 
