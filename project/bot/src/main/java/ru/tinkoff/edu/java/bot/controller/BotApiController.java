@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-@RestControllerAdvice
+@RestController
 public class BotApiController {
 
     @PostMapping("/update")
@@ -23,18 +23,5 @@ public class BotApiController {
     }
 
 
-    @ExceptionHandler(InvalidRequestParametersException.class)
-    public ResponseEntity<ApiErrorResponse> handleInvalidRequestParameters(InvalidRequestParametersException e) {
-        ApiErrorResponse apiErrorResponse = new ApiErrorResponse("Invalid request parameters", "400",
-                e.getClass().getSimpleName(), e.getMessage(), List.of(Arrays.toString(e.getStackTrace())));
-        return ResponseEntity.badRequest().body(apiErrorResponse);
-    }
 
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<ApiErrorResponse> handleException(Exception e) {
-
-        ApiErrorResponse apiErrorResponse = new ApiErrorResponse("Server error", "500",
-                e.getClass().getSimpleName(), e.getMessage(), List.of(Arrays.toString(e.getStackTrace())));
-        return ResponseEntity.internalServerError().body(apiErrorResponse);
-    }
 }

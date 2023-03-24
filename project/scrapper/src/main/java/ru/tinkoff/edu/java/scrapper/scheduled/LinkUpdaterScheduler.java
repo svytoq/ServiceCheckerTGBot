@@ -1,11 +1,10 @@
-package ru.tinkoff.edu.java.scrapper.client;
+package ru.tinkoff.edu.java.scrapper.scheduled;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
-@EnableScheduling
+
 public class LinkUpdaterScheduler {
 
     private static final Logger logger = LogManager.getLogger();
