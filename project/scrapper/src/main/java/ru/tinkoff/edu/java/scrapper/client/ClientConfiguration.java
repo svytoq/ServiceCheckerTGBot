@@ -18,19 +18,10 @@ public class ClientConfiguration {
                 .build();
     }
 
-    @Bean("githubWebClient")
-    public WebClient githubWebClient(String URL) {
-        return WebClient.builder()
-                .baseUrl(URL)
-                .defaultHeader("Content-Type", MediaType.APPLICATION_JSON_VALUE)
-                .build();
-    }
-
-
 
     @Bean("githubClient")
     public GitHubClient githubClient(WebClient githubWebClient) {
-        return new GitHubClient(githubWebClient);
+        return new GitHubClient();
     }
 
     @Bean("stackOverflowWebClient")
@@ -41,19 +32,13 @@ public class ClientConfiguration {
                 .build();
     }
 
-    @Bean("stackOverflowWebClient")
-    public WebClient stackOverflowWebClient(String URL) {
-        return WebClient.builder()
-                .baseUrl(URL)
-                .defaultHeader("Content-Type", MediaType.APPLICATION_JSON_VALUE)
-                .build();
-    }
+
 
 
 
     @Bean("stackOverflowClient")
-    public StackOverflowClient stackOverflowClient(WebClient stackOverflowWebClient) {
-        return new StackOverflowClient(stackOverflowWebClient);
+    public StackOverflowClient stackOverflowClient() {
+        return new StackOverflowClient();
     }
 
 }

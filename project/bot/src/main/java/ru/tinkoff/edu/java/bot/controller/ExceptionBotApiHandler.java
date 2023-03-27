@@ -1,4 +1,4 @@
-package ru.tinkoff.edu.java.bot.exceptionHandler;
+package ru.tinkoff.edu.java.bot.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

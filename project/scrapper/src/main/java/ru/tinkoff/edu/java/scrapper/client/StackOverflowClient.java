@@ -1,14 +1,32 @@
 package ru.tinkoff.edu.java.scrapper.client;
 
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
 import ru.tinkoff.edu.java.scrapper.dto.webClient.StackOverflowResponse;
 
-@RequiredArgsConstructor
+
 public class StackOverflowClient {
-    private final WebClient webClient;
+    private WebClient webClient;
+    private static final String STACK_OVERFLOW_BASE_URL = "https://api.stackexchange.com";
+    private String URL;
 
+    public StackOverflowClient(String customURL){
+        URL = customURL;
+        webClient = WebClient.builder()
+                .baseUrl(URL)
+                .defaultHeader("Content-Type", MediaType.APPLICATION_JSON_VALUE)
+                .build();
+    }
 
+    public StackOverflowClient(){
+        URL = STACK_OVERFLOW_BASE_URL;
+        webClient = WebClient.builder()
+                .baseUrl(URL)
+                .defaultHeader("Content-Type", MediaType.APPLICATION_JSON_VALUE)
+                .build();
+    }
 
     StackOverflowResponse fetchQuestion(long id){
         return webClient

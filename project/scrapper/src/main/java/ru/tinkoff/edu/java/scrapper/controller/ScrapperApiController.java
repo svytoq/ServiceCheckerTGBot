@@ -9,7 +9,7 @@ import ru.tinkoff.edu.java.scrapper.dto.controller.RemoveLinkRequest;
 
 import java.util.Arrays;
 
-@RestControllerAdvice
+@RestController
 public class ScrapperApiController {
 
     @PostMapping("/tg-chat/{id}")
