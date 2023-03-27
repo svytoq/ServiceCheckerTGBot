@@ -20,7 +20,7 @@ public class ClientConfiguration {
 
 
     @Bean("githubClient")
-    public GitHubClient githubClient(WebClient githubWebClient) {
+    public GitHubClient githubClient() {
         return new GitHubClient();
     }
 
