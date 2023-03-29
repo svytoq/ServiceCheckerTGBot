@@ -9,8 +9,8 @@ import ru.tinkoff.edu.java.scrapper.dto.webClient.GithubResponse;
 
 
 public class GitHubClient {
-    private WebClient webClient;
     private static final String GITHUB_BASE_URL = "https://api.github.com";
+    private WebClient webClient;
     private String URL;
 
     public GitHubClient(String customURL){

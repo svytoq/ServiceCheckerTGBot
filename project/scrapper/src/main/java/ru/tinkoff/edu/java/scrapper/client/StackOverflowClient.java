@@ -8,8 +8,8 @@ import ru.tinkoff.edu.java.scrapper.dto.webClient.StackOverflowResponse;
 
 
 public class StackOverflowClient {
-    private WebClient webClient;
     private static final String STACK_OVERFLOW_BASE_URL = "https://api.stackexchange.com";
+    private WebClient webClient;
     private String URL;
 
     public StackOverflowClient(String customURL){
