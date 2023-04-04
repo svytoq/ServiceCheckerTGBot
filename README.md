@@ -9,4 +9,5 @@ ServiceCheckerTGBot
 
 Примитивная схема выглядит следующим образом:
 
-image
+![image](https://user-images.githubusercontent.com/55537912/229814374-fe1589ed-012e-4a6b-921a-0fa63769699e.png)
+
