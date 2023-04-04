@@ -11,8 +11,8 @@ public class GitHubLinkParser extends AbstractLinkParser{
     private LinkParserChain nextChain;
 
 
-    private static final String USERNAME_REGEX = "[a-zA-Z\\d](?:[a-zA-Z\\d]|-(?=[a-zA-Z\\d]))";
-    private static final String REPOSITORY_NAME_REGEX = "[a-zA-Z\\d._\\-]";
+    private static final String USERNAME_REGEX = "[\\w.-]+";
+    private static final String REPOSITORY_NAME_REGEX = "[\\w.-]+";
 
     private static final Pattern USERNAME_REPOSITORY_PATTERN = Pattern.compile(
             "^(?:https://)?(?:www\\.)?github\\.com" + "/" +
