@@ -1,0 +1,10 @@
+app:
+  test: 42
+  scheduler:
+    interval: 10000
+springdoc:
+  swagger-ui:
+    path: swagger-ui
+    enabled: true
+  api-docs:
+    path: /v3/api-docs

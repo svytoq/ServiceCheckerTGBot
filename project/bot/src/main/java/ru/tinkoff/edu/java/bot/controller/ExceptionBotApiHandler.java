@@ -3,7 +3,7 @@ package ru.tinkoff.edu.java.bot.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import ru.tinkoff.edu.java.bot.dto.ApiErrorResponse;
+import ru.tinkoff.edu.java.bot.dto.scrapper.response.ApiErrorResponse;
 import ru.tinkoff.edu.java.bot.exception.InvalidRequestParametersException;
 
 import java.util.Arrays;

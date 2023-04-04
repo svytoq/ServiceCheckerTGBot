@@ -2,13 +2,8 @@ package ru.tinkoff.edu.java.bot.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import ru.tinkoff.edu.java.bot.dto.ApiErrorResponse;
-import ru.tinkoff.edu.java.bot.dto.LinkUpdateRequest;
-import ru.tinkoff.edu.java.bot.dto.LinkUpdateResponse;
-import ru.tinkoff.edu.java.bot.exception.InvalidRequestParametersException;
-
-import java.util.Arrays;
-import java.util.List;
+import ru.tinkoff.edu.java.bot.dto.scrapper.request.LinkUpdateRequest;
+import ru.tinkoff.edu.java.bot.dto.scrapper.response.LinkUpdateResponse;
 
 
 @RestController
