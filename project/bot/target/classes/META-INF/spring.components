@@ -1,7 +1,0 @@
-ru.tinkoff.edu.java.bot.BotApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
-ru.tinkoff.edu.java.bot.configuration.ApplicationConfig=org.springframework.boot.context.properties.ConfigurationProperties
-ru.tinkoff.edu.java.bot.configuration.BotInitializer=org.springframework.stereotype.Component
-ru.tinkoff.edu.java.bot.controller.BotApiController=org.springframework.stereotype.Component
-ru.tinkoff.edu.java.bot.controller.ExceptionBotApiHandler=org.springframework.stereotype.Component
-ru.tinkoff.edu.java.bot.service.MessageProcessor=org.springframework.stereotype.Component
-ru.tinkoff.edu.java.bot.service.TelegramBot=org.springframework.stereotype.Component
