@@ -2,6 +2,7 @@ package ru.tinkoff.edu.java.bot.command;
 
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import ru.tinkoff.edu.java.bot.enums.CommandName;
 import ru.tinkoff.edu.java.bot.service.MessageProcessor;
 
 public class HelpCommand extends AbstractCommand{
@@ -20,7 +21,6 @@ public class HelpCommand extends AbstractCommand{
 
     @Override
     public SendMessage execute(Update update) {
-        SendMessage sendMessage = messageProcessor.process(update, HELP_TEXT);
-        return sendMessage;
+        return messageProcessor.process(update, HELP_TEXT);
     }
 }

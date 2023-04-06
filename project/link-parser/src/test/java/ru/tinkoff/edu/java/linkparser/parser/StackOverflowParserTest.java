@@ -28,7 +28,7 @@ public class StackOverflowParserTest {
     }
 
     @Test
-    void handle_StackOverflow_UnCorrectlyLink(){
+    void handle_StackOverflow_InCorrectlyLink(){
         String link = "https://ru.stackoverflow.com/questions";
 
 

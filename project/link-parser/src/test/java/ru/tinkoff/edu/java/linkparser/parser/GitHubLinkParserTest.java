@@ -26,7 +26,7 @@ public class GitHubLinkParserTest {
     }
 
     @Test
-    void handle_GithubResult_UnCorrectlyLink(){
+    void handle_GithubResult_InCorrectlyLink(){
         String link = "https://github.com/svytoq";
 
 

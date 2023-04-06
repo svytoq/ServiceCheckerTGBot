@@ -13,7 +13,7 @@ import java.util.List;
 public class ExceptionBotApiHandler {
 
     public static final String CODE_400 = "400";
-    public static final String CODE_400_DESCRIPTION = "Invalid request parameters";
+    public static final String CODE_400_DESCRIPTION = "Bad request";
     public static final String CODE_500 = "500";
     public static final String CODE_500_DESCRIPTION = "Server error";
 
