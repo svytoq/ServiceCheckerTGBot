@@ -4,14 +4,14 @@
 CREATE TABLE IF NOT EXISTS chat
 (
     id INT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL
+    user_name VARCHAR(255) NOT NULL
 );
 
 --changeset svytoq:create_table_chat
 CREATE TABLE IF NOT EXISTS link
 (
+    id INT PRIMARY KEY,
     url VARCHAR(255) NOT NULL,
-    id INT,
     update_time TIME
 )
 ;

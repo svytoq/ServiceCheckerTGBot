@@ -1,9 +1,11 @@
-package ru.tinkoff.edu.java.scrapper.client;
+package ru.tinkoff.edu.java.scrapper.configuration;
 
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
+import ru.tinkoff.edu.java.scrapper.client.GitHubClient;
+import ru.tinkoff.edu.java.scrapper.client.StackOverflowClient;
 
 public class ClientConfiguration {
 
