@@ -21,7 +21,7 @@ import java.sql.SQLException;
 public class IntegrationEnvironment {
 
     protected static final PostgreSQLContainer<?> POSTGRE_SQL_CONTAINER;
-    private static final Path MIGRATIONS_PATH;
+    private static final Path MIGRATIONS_PATH = new File("migrations").toPath().toAbsolutePath();
 
     static {
         POSTGRE_SQL_CONTAINER = new PostgreSQLContainer<>("postgres:15")
@@ -30,7 +30,6 @@ public class IntegrationEnvironment {
                 .withPassword("postgres");
         POSTGRE_SQL_CONTAINER.start();
 
-        MIGRATIONS_PATH = new File("migrations").toPath().toAbsolutePath();
 
         try (Connection connection = DriverManager.getConnection(POSTGRE_SQL_CONTAINER.getJdbcUrl(),
                     POSTGRE_SQL_CONTAINER.getUsername(), POSTGRE_SQL_CONTAINER.getPassword())){
